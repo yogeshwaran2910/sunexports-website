@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factory Gallery — Photos from Our Cocopeat &amp; Coir Processing Unit | Sun Exports</title>
+  <meta name="description" content="Take a visual tour of the Sun Exports manufacturing facility in Dindigul, Tamil Nadu — washing, drying, screening, compressing, and packing our cocopeat and coir products for export.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assests/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assests/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assests/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assests/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assests/favicon/site.webmanifest">
+
+  <!-- ================================================================
+       GALLERY-ONLY STYLES
+       These rules only affect this page. They reuse the same color /
+       spacing variables defined in css/styles.css so the gallery
+       matches the rest of the site automatically.
+  ================================================================= -->
+  <style>
+    .gallery-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 0 0 40px;
+    }
+    .gallery-filter-btn {
+      font-family: var(--font-body, inherit);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      padding: 9px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--color-border, #ddd);
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .gallery-filter-btn:hover { border-color: var(--color-gold, #b8933f); }
+    .gallery-filter-btn.active {
+      background: var(--color-forest, #1f3d2b);
+      border-color: var(--color-forest, #1f3d2b);
+      color: #fff;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius-card, 12px);
+      overflow: hidden;
+      cursor: zoom-in;
+      aspect-ratio: 4 / 3;
+      background: var(--color-cream, #f4f1ea) center/cover no-repeat;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,0.16); }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .gallery-caption {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      color: #fff;
+      background: linear-gradient(to top, rgba(0,0,0,0.72), rgba(0,0,0,0));
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .gallery-item:hover .gallery-caption { opacity: 1; transform: translateY(0); }
+    .gallery-empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--color-muted, #777);
+      font-size: 1rem;
+      grid-column: 1 / -1;
+    }
+
+    /* Lightbox */
+    .lightbox-overlay {
+      position: fixed; inset: 0;
+      background: rgba(10, 15, 12, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 24px;
+    }
+    .lightbox-overlay.open { display: flex; }
+    .lightbox-figure { max-width: 90vw; max-height: 86vh; text-align: center; }
+    .lightbox-figure img {
+      max-width: 90vw; max-height: 78vh;
+      border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .lightbox-figure figcaption {
+      color: #f2ede2; margin-top: 14px; font-size: 0.95rem; letter-spacing: 0.02em;
+    }
+    .lightbox-close, .lightbox-prev, .lightbox-next {
+      position: fixed;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,0.25); }
+    .lightbox-close { top: 24px; right: 24px; }
+    .lightbox-prev { left: 24px; top: 50%; transform: translateY(-50%); }
+    .lightbox-next { right: 24px; top: 50%; transform: translateY(-50%); }
+    @media (max-width: 640px) {
+      .lightbox-prev { left: 10px; }
+      .lightbox-next { right: 10px; }
+      .lightbox-close { top: 12px; right: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav scrolled">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assests/images/SUN LOGO.png" alt="Sun Exports Logo" class="logo-img">
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-dropdown">
+          <a href="products.html">Products &#9662;</a>
+          <div class="nav-dropdown-menu">
+            <a href="cocopeat.html">Cocopeat</a>
+            <a href="coco-husk-chips.html">Coco Husk Chips</a>
+            <a href="cocopeat-grow-bags.html">Cocopeat Grow Bags</a>
+            <a href="coir-pith.html">Coir Pith</a>
+          </div>
+        </li>
+        <li><a href="quality.html">Quality</a></li>
+        <li><a href="export-markets.html">Markets</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    <div class="nav-actions">
+      <select id="lang-select" class="lang-switcher" aria-label="Language">
+        <option value="en">&#127468;&#127463; EN</option>
+        <option value="ar">&#127480;&#127462; AR</option>
+        <option value="es">&#127466;&#127480; ES</option>
+        <option value="fr">&#127467;&#127479; FR</option>
+        <option value="de">&#127465;&#127466; DE</option>
+        <option value="ja">&#127471;&#127477; JA</option>
+        <option value="ko">&#127472;&#127479; KO</option>
+        <option value="pt">&#127463;&#127479; PT</option>
+        <option value="nl">&#127475;&#127473; NL</option>
+        <option value="zh-CN">&#127464;&#127475; CN</option>
+      </select>
+      <a href="contact.html" class="btn btn-gold">Get a Quote</a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="cocopeat.html">Cocopeat</a>
+    <a href="coco-husk-chips.html">Coco Husk Chips</a>
+    <a href="cocopeat-grow-bags.html">Cocopeat Grow Bags</a>
+    <a href="coir-pith.html">Coir Pith</a>
+    <a href="quality.html">Quality</a>
+    <a href="export-markets.html">Markets</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+<header class="hero short" style="background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80');">
+  <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
+    <span class="eyebrow">Factory &middot; Gallery</span>
+    <h1>Inside Our Facility.<br>From Husk to Export-Ready Product.</h1>
+    <p>A photo tour of our processing unit in Dindigul, Tamil Nadu &mdash; washing, drying, screening, compressing, and packing.</p>
+  </div>
+</header>
+
+<section class="section-cream">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Take a Look Around</span>
+      <h2>Take a Tour of Our Manufacturing Facility</h2>
+    </div>
+
+    <!-- Filter buttons are generated automatically from the categories
+         used in the galleryImages list below. You don't need to edit
+         this part by hand. -->
+    <div class="gallery-toolbar" id="galleryToolbar"></div>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<section class="section-forest">
+  <div class="container" style="text-align: center;">
+    <div class="section-head center reveal" style="margin: 0 auto 32px;">
+      <span class="eyebrow">Want to See More?</span>
+      <h2>Schedule a virtual or in-person factory visit.</h2>
+      <p>We welcome serious buyers to inspect our facility, either in person in Dindigul or over a live video call.</p>
+    </div>
+    <a href="contact.html" class="btn btn-gold">Request a Factory Visit &rarr;</a>
+  </div>
+</section>
+
+<!-- Lightbox (single reusable popup for viewing a full-size photo) -->
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#10094;</button>
+  <figure class="lightbox-figure">
+    <img id="lightboxImg" src="" alt="">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+  <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#10095;</button>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>SUN EXPORTS</h3>
+        <p>Manufacturer &amp; Exporter of Premium Coir Products<br>Dindigul, Tamil Nadu, India &mdash; Est. 2010</p>
+        <p style="margin-top: 16px;">Trusted by buyers in over 20 countries across Europe, the Middle East, Southeast Asia, and the Americas.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+          <li style="padding-left: 16px;"><a href="cocopeat.html">&rarr; Cocopeat</a></li>
+          <li style="padding-left: 16px;"><a href="coco-husk-chips.html">&rarr; Coco Husk Chips</a></li>
+          <li style="padding-left: 16px;"><a href="cocopeat-grow-bags.html">&rarr; Cocopeat Grow Bags</a></li>
+          <li style="padding-left: 16px;"><a href="coir-pith.html">&rarr; Coir Pith</a></li>
+          <li style="margin-top: 12px;"><a href="about.html">About Us</a></li>
+          <li><a href="quality.html">Quality</a></li>
+          <li><a href="export-markets.html">Markets</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><span class="label">&#128205;</span> Dindigul, Tamil Nadu, India &mdash; 624 618</p>
+        <p><span class="label">&#128222;</span> +91 9578684630</p>
+        <p><span class="label">&#128222;</span> +91 9976480745</p>
+        <p><span class="label">&#9993;</span><a href="mailto:sunexports2020@gmail.com">sunexports2020@gmail.com</a></p>
+          <p style="margin-top:16px;">
+    <span class="label">&#128172;</span>
+    <a href="https://wa.me/919578684630?text=Hello%20Sun%20Exports,%20I%20am%20interested%20in%20your%20coir%20products.%20Could%20you%20please%20share%20your%20product%20catalogue%20and%20quotation?" target="_blank" rel="noopener">
+      WhatsApp: +91 9578684630
+    </a>
+  </p>
+        <div class="certs">
+          <span class="cert-badge">ISO</span>
+          <span class="cert-badge">FIEO</span>
+          <span class="cert-badge">Phytosanitary</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2025 Sun Exports. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></div>
+      <div>Exporting from the heart of Tamil Nadu, India to the world.</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/919578684630?text=Hello%2C%20I%27m%20interested%20in%20getting%20a%20quote%20for%20coir%20products%20from%20Sun%20Exports." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="label">Chat with us</span>
+</a>
+
+<div id="google_translate_element" style="display:none;"></div>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="js/main.js"></script>
+
+<!-- ================================================================
+     GALLERY PHOTOS — THIS IS THE ONLY PART YOU NEED TO EDIT
+     =================================================================
+     To add a new photo:
+       1. Copy your image file into: assests/images/gallery/
+          (create that folder if it doesn't exist yet)
+       2. Add one line below in the same format as the examples.
+       3. Save the file. That's it — no other code needs to change.
+
+     Each entry needs:
+       src      -> the path to the image file (relative to this page)
+       caption  -> short text shown when hovering / in the popup
+       category -> a short label used for the filter buttons
+                   (use the same word for photos that belong together,
+                   e.g. "Washing", "Drying", "Packing", "Warehouse")
+
+     To remove a photo, delete its whole { ... } line.
+     To reorder photos, just move the lines up or down.
+================================================================== -->
+<script>
+    const galleryImages = [
+
+  // =========================
+  // FACTORY OVERVIEW (4)
+  // =========================
+  { src:"assests/images/gallery/factory overview/Factory overview-1.webp", caption:"Factory Overview", category:"Factory Overview" },
+  { src:"assests/images/gallery/factory overview/Factory overview-2.webp", caption:"Factory Overview", category:"Factory Overview" },
+  { src:"assests/images/gallery/factory overview/Factory overview-3.webp", caption:"Factory Overview", category:"Factory Overview" },
+  { src:"assests/images/gallery/factory overview/Factory overview-4.webp", caption:"Factory Overview", category:"Factory Overview" },
+
+  // =========================
+  // RAW MATERIALS (5)
+  // =========================
+  { src:"assests/images/gallery/Raw Materials/Raw-1.webp", caption:"Raw Coconut Husk", category:"Raw Materials" },
+  { src:"assests/images/gallery/Raw Materials/Raw-2.webp", caption:"Raw Coconut Husk", category:"Raw Materials" },
+  { src:"assests/images/gallery/Raw Materials/Raw-3.webp", caption:"Raw Coconut Husk", category:"Raw Materials" },
+  { src:"assests/images/gallery/Raw Materials/Raw-4.webp", caption:"Raw Coconut Husk", category:"Raw Materials" },
+  { src:"assests/images/gallery/Raw Materials/Raw-5.webp", caption:"Raw Coconut Husk", category:"Raw Materials" },
+
+  // =========================
+  // DEFIBERING (11)
+  // =========================
+  { src:"assests/images/gallery/defibering/defibering-1.webp", caption:"Defibering Process", category:"Defibering" },
+  { src:"assests/images/gallery/defibering/defibering-2.webp", caption:"Defibering Process", category:"Defibering" },
+  { src:"assests/images/gallery/defibering/defibering-3.webp", caption:"Defibering Process", category:"Defibering" },
+  { src:"assests/images/gallery/defibering/defibering-4.webp", caption:"Defibering Process", category:"Defibering" },
+  { src:"assests/images/gallery/defibering/defibering-5.webp", caption:"Defibering Process", category:"Defibering" },
+  { src:"assests/images/gallery/defibering/defibering-6.webp", caption:"Defibering Process", category:"Defibering" },
+  { src:"assests/images/gallery/defibering/defibering-7.webp", caption:"Defibering Process", category:"Defibering" },
+  { src:"assests/images/gallery/defibering/defibering-8.webp", caption:"Defibering Process", category:"Defibering" },
+  { src:"assests/images/gallery/defibering/defibering-9.webp", caption:"Defibering Process", category:"Defibering" },
+  { src:"assests/images/gallery/defibering/defibering-10.webp", caption:"Defibering Process", category:"Defibering" },
+  { src:"assests/images/gallery/defibering/defibering-11.webp", caption:"Defibering Process", category:"Defibering" },
+
+  // =========================
+  // WASHING & DRYING (6)
+  // =========================
+  { src:"assests/images/gallery/Washing and drying process/Washing-1.webp", caption:"Washing Process", category:"Washing & Drying" },
+
+  { src:"assests/images/gallery/Washing and drying process/Drying-1.webp", caption:"Drying Process", category:"Washing & Drying" },
+  { src:"assests/images/gallery/Washing and drying process/Drying-2.webp", caption:"Drying Process", category:"Washing & Drying" },
+  { src:"assests/images/gallery/Washing and drying process/Drying-3.webp", caption:"Drying Process", category:"Washing & Drying" },
+  { src:"assests/images/gallery/Washing and drying process/Drying-4.webp", caption:"Drying Process", category:"Washing & Drying" },
+  { src:"assests/images/gallery/Washing and drying process/Drying-5.webp", caption:"Drying Process", category:"Washing & Drying" },
+
+  // =========================
+  // COMPRESSION & PACKAGING (10)
+  // =========================
+  { src:"assests/images/gallery/compression & packaging/Compress-1.webp", caption:"Compression Process", category:"Compression & Packaging" },
+  { src:"assests/images/gallery/compression & packaging/Compress-2.webp", caption:"Compression Process", category:"Compression & Packaging" },
+  { src:"assests/images/gallery/compression & packaging/Compress-3.webp", caption:"Compression Process", category:"Compression & Packaging" },
+  { src:"assests/images/gallery/compression & packaging/Compress-4.webp", caption:"Compression Process", category:"Compression & Packaging" },
+  { src:"assests/images/gallery/compression & packaging/Compress-5.webp", caption:"Compression Process", category:"Compression & Packaging" },
+  { src:"assests/images/gallery/compression & packaging/Compress-6.webp", caption:"Compression Process", category:"Compression & Packaging" },
+
+  { src:"assests/images/gallery/compression & packaging/Testing-1.webp", caption:"Quality Testing", category:"Compression & Packaging" },
+
+  { src:"assests/images/gallery/compression & packaging/Package-1.webp", caption:"Packaging", category:"Compression & Packaging" },
+  { src:"assests/images/gallery/compression & packaging/Package-2.webp", caption:"Packaging", category:"Compression & Packaging" },
+  { src:"assests/images/gallery/compression & packaging/Package-3.webp", caption:"Packaging", category:"Compression & Packaging" },
+
+  // =========================
+  // EXPORT (7)
+  // =========================
+  { src:"assests/images/gallery/Container & Export/Container-1.webp", caption:"Container Loading", category:"Export" },
+  { src:"assests/images/gallery/Container & Export/Container-2.webp", caption:"Container Loading", category:"Export" },
+  { src:"assests/images/gallery/Container & Export/Container-3.webp", caption:"Container Loading", category:"Export" },
+  { src:"assests/images/gallery/Container & Export/Container-4.webp", caption:"Container Loading", category:"Export" },
+  { src:"assests/images/gallery/Container & Export/Container-5.webp", caption:"Container Loading", category:"Export" },
+  { src:"assests/images/gallery/Container & Export/Container-6.webp", caption:"Container Loading", category:"Export" },
+
+  { src:"assests/images/gallery/Container & Export/Export-1.webp", caption:"Export Ready Shipment", category:"Export" },
+
+];
+  // ---------------- Rendering logic below (no need to edit) ----------------
+  const grid = document.getElementById('galleryGrid');
+  const toolbar = document.getElementById('galleryToolbar');
+
+  function renderEmptyState() {
+    grid.innerHTML = '<div class="gallery-empty">Photos coming soon. Add image files to <code>assests/images/gallery/</code> and list them in <code>gallery.html</code> to see them here.</div>';
+  }
+
+  function buildToolbar() {
+    const categories = ['All', ...new Set(galleryImages.map(img => img.category).filter(Boolean))];
+    toolbar.innerHTML = categories.map((cat, i) =>
+      `<button class="gallery-filter-btn${i === 0 ? ' active' : ''}" data-filter="${cat}">${cat}</button>`
+    ).join('');
+    toolbar.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        toolbar.querySelectorAll('.gallery-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderGrid(btn.dataset.filter);
+      });
+    });
+  }
+
+  let currentList = [];
+
+  function renderGrid(filter) {
+    const filtered = (!filter || filter === 'All')
+      ? galleryImages
+      : galleryImages.filter(img => img.category === filter);
+
+    currentList = filtered;
+
+    if (filtered.length === 0) {
+      renderEmptyState();
+      return;
+    }
+
+    grid.innerHTML = filtered.map((img, i) => `
+      <div class="gallery-item" data-index="${i}">
+        <img src="${img.src}" alt="${img.caption || ''}" loading="lazy">
+        <div class="gallery-caption">${img.caption || ''}</div>
+      </div>
+    `).join('');
+
+    grid.querySelectorAll('.gallery-item').forEach(el => {
+      el.addEventListener('click', () => openLightbox(parseInt(el.dataset.index, 10)));
+    });
+  }
+
+  // Lightbox
+  const overlay = document.getElementById('lightboxOverlay');
+  const lbImg = document.getElementById('lightboxImg');
+  const lbCaption = document.getElementById('lightboxCaption');
+  let lbIndex = 0;
+
+  function openLightbox(index) {
+    lbIndex = index;
+    updateLightbox();
+    overlay.classList.add('open');
+  }
+  function updateLightbox() {
+    const img = currentList[lbIndex];
+    if (!img) return;
+    lbImg.src = img.src;
+    lbImg.alt = img.caption || '';
+    lbCaption.textContent = img.caption || '';
+  }
+  function closeLightbox() { overlay.classList.remove('open'); }
+  function showPrev() { lbIndex = (lbIndex - 1 + currentList.length) % currentList.length; updateLightbox(); }
+  function showNext() { lbIndex = (lbIndex + 1) % currentList.length; updateLightbox(); }
+
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxPrev').addEventListener('click', showPrev);
+  document.getElementById('lightboxNext').addEventListener('click', showNext);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (!overlay.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showPrev();
+    if (e.key === 'ArrowRight') showNext();
+  });
+
+  // Init
+  if (galleryImages.length === 0) {
+    renderEmptyState();
+    toolbar.style.display = 'none';
+  } else {
+    buildToolbar();
+    renderGrid('All');
+  }
+</script>
+</body>
+</html>

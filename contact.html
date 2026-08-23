@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Sun Exports — Get a Quote for Coir Products</title>
+  <meta name="description" content="Contact Sun Exports for premium cocopeat, coco husk chips, cocopeat grow bags, and coir pith. Email, WhatsApp, or submit an inquiry. Response within 24 hours.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assests/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assests/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assests/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assests/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assests/favicon/site.webmanifest">
+  <style>
+    .faq-item { border-bottom: 1px solid var(--color-border); }
+    .faq-q { width: 100%; text-align: left; padding: 20px 0; font-size: 1.0625rem; font-weight: 600; color: var(--color-forest); display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: none; border: none; }
+    .faq-q::after { content: '+'; font-size: 1.5rem; color: var(--color-gold); transition: transform 0.3s; }
+    .faq-item.open .faq-q::after { content: '\\2212'; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; color: var(--color-muted); }
+    .faq-item.open .faq-a { padding-bottom: 20px; }
+
+    /* Inquiry form section: stretch edge-to-edge instead of sitting in the narrow centered container */
+    #form.section-white { padding-left: 0; padding-right: 0; }
+    #form .container { max-width: 100%; width: 100%; padding-left: 32px; padding-right: 32px; }
+    #form .form-column { display: flex; flex-direction: column; }
+  </style>
+</head>
+<body>
+  <!-- Google Translate (hidden by default, can be enabled via language selector) -->
+  <div id="google_translate_element" style="display:none;"></div>
+  
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assests/images/SUN LOGO.png" alt="Sun Exports Logo" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-dropdown">
+          <a href="products.html">Products &#9662;</a>
+          <div class="nav-dropdown-menu">
+            <a href="cocopeat.html">Cocopeat</a>
+            <a href="coco-husk-chips.html">coco husk chips</a>
+            <a href="cocopeat-grow-bags.html">cocopeat grow bags</a>
+            <a href="coir-pith.html">coir pith / Dust</a>
+          </div>
+        </li>
+        <li><a href="quality.html">Quality</a></li>
+        <li><a href="export-markets.html">Markets</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select id="lang-select" class="lang-switcher" aria-label="Language" onchange="changeLanguage(this.value)">
+          <option value="en">&#127468;&#127463; EN</option>
+          <option value="ar">&#127480;&#127462; AR</option>
+          <option value="es">&#127466;&#127480; ES</option>
+          <option value="fr">&#127467;&#127479; FR</option>
+          <option value="de">&#127465;&#127466; DE</option>
+          <option value="ja">&#127471;&#127477; JA</option>
+          <option value="ko">&#127472;&#127479; KO</option>
+          <option value="pt">&#127463;&#127479; PT</option>
+          <option value="nl">&#127475;&#127473; NL</option>
+          <option value="zh-CN">&#127464;&#127475; CN</option>
+        </select>
+        <a href="contact.html" class="btn btn-gold">Get a Quote</a>
+        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="cocopeat.html">Cocopeat</a>
+    <a href="coco-husk-chips.html">coco husk chips</a>
+    <a href="cocopeat-grow-bags.html">cocopeat grow bags</a>
+    <a href="coir-pith.html">coir pith / Dust</a>
+    <a href="quality.html">Quality</a>
+    <a href="export-markets.html">Markets</a>
+    <a href="blog.html">Blog</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero short" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&amp;q=80');">
+    <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
+      <span class="eyebrow">Get In Touch</span>
+      <h1>Let's Start<br>a Conversation.</h1>
+      <p>Our export team responds to every genuine inquiry within 24 hours.</p>
+    </div>
+  </header>
+
+  <!-- Contact Methods Section -->
+  <section class="section-cream">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="feature-card reveal" style="text-align: center;">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin: 0 auto 16px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <h3>Request a Quote</h3>
+          <p>Use our detailed form below to submit your product inquiry. Include your product, quantity, target port, and any special requirements &mdash; we'll respond with pricing, lead time, and a product spec sheet.</p>
+          <a href="#form" style="color: var(--color-gold); font-weight: 600;">Scroll down to form &darr;</a>
+        </div>
+        <div class="feature-card reveal reveal-delay-1" style="text-align: center;">
+          <svg class="icon" viewBox="0 0 24 24" fill="#25D366" stroke="none" style="margin: 0 auto 16px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+          <h3>WhatsApp Direct</h3>
+          <p>For fastest communication, message us directly on WhatsApp. Our export manager is available Monday&ndash;Saturday, 9AM&ndash;6PM IST.</p>
+          <a href="https://wa.me/919578684630?text=Hello%20Sun%20Exports,%0A%0AI%20am%20interested%20in%20your%20coir%20products.%20Please%20share%20your%20product%20catalogue,%20pricing,%20MOQ,%20and%20quotation%20details.%0A%0AThank%20you." style="color: var(--color-gold); font-weight: 600;">+91 9578684630 &rarr;</a>
+        </div>
+        <div class="feature-card reveal reveal-delay-2" style="text-align: center;">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin: 0 auto 16px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <h3>Email</h3>
+          <p>For formal correspondence, quotation requests, and document exchange:</p>
+          <a href="mailto:sunexports2020@gmail.com" style="color: var(--color-gold); font-weight: 600; display: block;">sunexports2020@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry Form Section -->
+  <section class="section-white" id="form">
+    <div class="container">
+      <div class="section-head reveal"><span class="eyebrow">Send Your Inquiry</span><h2>Request a Quote or Send Us a Message</h2></div>
+      <div class="grid grid-2 reveal" style="gap: 48px; align-items: start;">
+        <div class="form-column">
+        <form class="form-card" data-google-sheet="contact">
+
+          <div class="form-row">
+
+            <div class="form-field">
+              <label>1. Full Name *</label>
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="John Doe">
+            </div>
+
+            <div class="form-field">
+              <label>2. Job Title / Role</label>
+              <select name="role">
+                <option value="">Select role...</option>
+                <option value="Procurement Manager">Procurement Manager</option>
+                <option value="Director">Director</option>
+                <option value="Owner">Owner</option>
+                <option value="Buyer">Buyer</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-field">
+              <label>3. Company Name *</label>
+              <input
+                type="text"
+                name="company"
+                required
+                placeholder="ABC Trading Co.">
+            </div>
+
+            <div class="form-field">
+              <label>4. Website (optional)</label>
+              <input
+                type="url"
+                name="website"
+                placeholder="https://example.com">
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-field">
+              <label>5. Country *</label>
+              <input
+                type="text"
+                name="country"
+                required
+                placeholder="Netherlands">
+            </div>
+
+            <div class="form-field">
+              <label>6. City / Port of Delivery *</label>
+              <input
+                type="text"
+                name="port"
+                required
+                placeholder="Rotterdam">
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-field">
+              <label>7. Email *</label>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="john@example.com">
+            </div>
+
+
+            <div class="form-field">
+
+              <label>8. Phone / WhatsApp *</label>
+
+              <div style="display: flex; gap: 8px;">
+
+                <select
+                  name="country_code_select"
+                  id="contact-country-code-select"
+                  required
+                  onchange="toggleContactCustomCountryCode(this)"
+                  style="max-width: 115px;">
+
+                  <option value="+91">🇮🇳 +91</option>
+                  <option value="+1">🇺🇸 +1</option>
+                  <option value="+44">🇬🇧 +44</option>
+                  <option value="+971">🇦🇪 +971</option>
+                  <option value="+966">🇸🇦 +966</option>
+                  <option value="+65">🇸🇬 +65</option>
+                  <option value="+60">🇲🇾 +60</option>
+                  <option value="+61">🇦🇺 +61</option>
+                  <option value="+49">🇩🇪 +49</option>
+                  <option value="+33">🇫🇷 +33</option>
+                  <option value="+34">🇪🇸 +34</option>
+                  <option value="+81">🇯🇵 +81</option>
+                  <option value="+82">🇰🇷 +82</option>
+                  <option value="+86">🇨🇳 +86</option>
+                  <option value="+31">🇳🇱 +31</option>
+                  <option value="+55">🇧🇷 +55</option>
+                  <option value="other">Other</option>
+
+                </select>
+
+
+                <input
+                  type="text"
+                  name="custom_country_code"
+                  id="contact-custom-country-code"
+                  placeholder="+Code"
+                  inputmode="tel"
+                  style="display: none; max-width: 115px;">
+
+
+                <input
+                  type="tel"
+                  name="phone"
+                  required
+                  placeholder="98765 43210"
+                  style="flex: 1;">
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-field">
+
+            <label>9. How did you find us?</label>
+
+            <select name="source">
+
+              <option value="">Select source...</option>
+              <option value="Google Search">Google Search</option>
+              <option value="Trade Exhibition">Trade Exhibition</option>
+              <option value="Referral">Referral</option>
+              <option value="IndiaMART">IndiaMART</option>
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="Other">Other</option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-field">
+            <label>10. Product(s) Required *</label>
+
+            <div class="check-group" style="grid-template-columns: 1fr;">
+
+              <label>
+                <input type="checkbox" name="product" value="Cocopeat 5kg Blocks">
+                Cocopeat (5kg Blocks)
+              </label>
+
+              <label>
+                <input type="checkbox" name="product" value="Coco husk chips Brown">
+                Coco Husk Chips (Brown)
+              </label>
+
+              <label>
+                <input type="checkbox" name="product" value="Coco husk chips White">
+                Coco Husk Chips (White)
+              </label>
+
+              <label>
+                <input type="checkbox" name="product" value="Cocopeat grow bags">
+                Cocopeat Grow Bags
+              </label>
+
+              <label>
+                <input type="checkbox" name="product" value="Coir pith">
+                Coir Pith
+              </label>
+
+              <label>
+                <input type="checkbox" name="product" value="Mixed">
+                Mixed / Multiple Products
+              </label>
+
+            </div>
+          </div>
+
+          <div class="form-field">
+
+            <label>11. Quantity Required *</label>
+
+            <input
+              type="text"
+              name="quantity"
+              required
+              placeholder="e.g., 1 x 40ft FCL per month, 500 units per quarter">
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-field">
+
+              <label>12. Incoterms</label>
+
+              <select name="incoterms">
+
+                <option value="">Select Incoterm...</option>
+                <option value="FOB">FOB</option>
+                <option value="CIF">CIF</option>
+                <option value="No preference">No preference</option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-field">
+
+              <label>13. Packaging</label>
+
+              <select name="packaging">
+
+                <option value="">Select packaging...</option>
+                <option value="Standard Sun Exports branding">
+                  Standard Sun Exports branding
+                </option>
+
+                <option value="Custom / Private Label">
+                  Custom / Private Label
+                </option>
+
+                <option value="Neutral / Blank">
+                  Neutral / Blank
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-row">
+
+            <div class="form-field">
+
+              <label>14. I am a...</label>
+
+              <select name="buyer_type">
+
+                <option value="">Select buyer type...</option>
+                <option value="Distributor">Distributor</option>
+                <option value="Retailer">Retailer</option>
+                <option value="Grower / Farm">Grower / Farm</option>
+                <option value="Manufacturer">Manufacturer</option>
+                <option value="Government / NGO">Government / NGO</option>
+                <option value="Other">Other</option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-field">
+
+              <label>15. Sample Required?</label>
+
+              <select name="sample">
+
+                <option value="">Select sample preference...</option>
+
+                <option value="Yes, before bulk order">
+                  Yes, before bulk order
+                </option>
+
+                <option value="No, ready to order">
+                  No, ready to order
+                </option>
+
+                <option value="Will decide after quote">
+                  Will decide after quote
+                </option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+
+          <div class="form-field">
+
+            <label>16. Message / Additional Requirements</label>
+
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Any special requirements, target delivery date, or questions?"></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-gold"
+            style="width: 100%; justify-content: center;">
+
+            Send My Inquiry to Sun Exports →
+
+          </button>
+
+
+          <p
+            style="text-align: center; font-size: 0.8125rem; color: var(--color-muted); margin-top: 16px;">
+
+            &#10003; We respond within 24 business hours
+            &middot;
+            &#10003; Your information is never shared
+            &middot;
+            &#10003; No automated replies
+
+          </p>
+
+        </form>
+
+        <div class="form-success" id="form-success" style="display: none;">
+          <h3>Thank you, <span class="success-name"></span>!</h3>
+          <p>Your inquiry has been received. Our export team will contact you at <span class="success-email"></span> within 24 hours.</p>
+        </div>
+
+      <script>
+
+      function toggleContactCustomCountryCode(select) {
+
+        const customInput =
+          document.getElementById("contact-custom-country-code");
+
+        if (select.value === "other") {
+
+          customInput.style.display = "block";
+          customInput.required = true;
+          customInput.focus();
+
+        } else {
+
+          customInput.style.display = "none";
+          customInput.required = false;
+          customInput.value = "";
+
+        }
+
+      }
+
+      </script>
+
+        </div>
+
+        <div>
+          <div class="form-card" style="background: var(--color-forest); color: var(--color-white);">
+            <h3 style="color: var(--color-gold); font-family: var(--font-body); font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 20px;">Contact Details</h3>
+            <p style="color: var(--color-white); margin-bottom: 12px;"><strong style="color: var(--color-gold-light);">&#128205; Address</strong><br>Sun Exports<br>No:393-1, B4a, Kumarapalayam Palani, Dindigul,<br> Tamilnadu, India &mdash; 624 618</p>
+            <p style="color: var(--color-white); margin-bottom: 12px;"><strong style="color: var(--color-gold-light);">&#128222; Phone</strong><br>+91 9578684630<br> +91 9976480745</p>
+            <p style="color: var(--color-white); margin-bottom: 12px;"><strong style="color: var(--color-gold-light);">&#9993; Email</strong><br>sunexports2020@gmail.com</p>
+            <p style="color: var(--color-white); margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.2);"><strong style="color: var(--color-gold-light);">Business Hours</strong><br>Monday &ndash; Saturday: 9:00 AM &ndash; 6:00 PM IST<br>Sunday: Closed</p>
+          </div>
+          <div style="margin-top: 24px; aspect-ratio: 4/3; background: var(--color-cream); border-radius: var(--radius-card); overflow: hidden;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.9655095850144!2d77.40201930851579!3d10.581869589511742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9c57b4c3d063b%3A0x91aa91e874103fc8!2sSun%20Exports!5e0!3m2!1sen!2sin!4v1784147375831!5m2!1sen!2sin" width=100% height=100% style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+ <section class="section-cream contact-page">
+    <div class="container" style="max-width: 880px;">
+      <div class="section-head reveal" style="text-align: left;"><span class="eyebrow">FAQ</span><h2>Common buyer questions.</h2></div>
+      <div class="reveal" style="background: var(--color-white); border-radius: var(--radius-card); padding: 0 32px; box-shadow: var(--shadow-sm);">
+        <div class="faq-item">
+          <button class="faq-q" type="button">Do you supply samples before bulk orders?</button>
+          <div class="faq-a"><p style="padding-top: 8px;">Yes. We provide product samples for cocopeat, coco husk chips, coir pith, and cocopeat grow bags to verified buyers. Sample shipping cost is typically borne by the buyer for international destinations. Submit your inquiry form and request a sample &mdash; our team will arrange it.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">What is the minimum order quantity?</button>
+          <div class="faq-a"><p style="padding-top: 8px;">For standard products, our MOQ is typically 1 &times; 20ft FCL. For buyers wanting to trial smaller quantities first, please mention your volume requirement in your inquiry.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">Do you provide buffered (Ca-Mg enriched) cocopeat?</button>
+          <div class="faq-a"><p style="padding-top: 8px;">Yes. We offer buffered cocopeat treated with calcium and magnesium nitrate solution, which is required by many European hydroponic growers. Mention this requirement in your inquiry and we will quote accordingly.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">What certifications do you provide with each shipment?</button>
+          <div class="faq-a"><p style="padding-top: 8px;">Certificate of Analysis (EC, pH, moisture), Phytosanitary Certificate, Fumigation Certificate (where required), Certificate of Origin, Commercial Invoice, Packing List, and Bill of Lading. All documents are provided digitally and in hard copy.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">What are your payment terms?</button>
+          <div class="faq-a"><p style="padding-top: 8px;">We typically work with 30&ndash;50% advance payment and the balance before shipment. For long-term buyers, we can discuss terms. All payments via wire transfer (SWIFT / TT).</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">Can you do private label / custom branded packaging?</button>
+          <div class="faq-a"><p style="padding-top: 8px;">Yes. We offer private-label packaging for distributors and brands. Minimum quantities apply. Share your artwork and requirements and we will prepare a mock-up for approval.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button">Which ports do you ship from?</button>
+          <div class="faq-a"><p style="padding-top: 8px;">We primarily ship from Tuticorin (V.O. Chidambaranar Port) and Kochi Port. Both have excellent connectivity to global shipping routes.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>SUN EXPORTS</h3>
+          <p>Manufacturer &amp; Exporter of Premium Coir Products<br>Dindigul, Tamil Nadu, India &mdash; Est. 2010</p>
+          <p style="margin-top: 16px;">Trusted by buyers in over 20 countries across Europe, the Middle East, Southeast Asia, and the Americas.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="products.html">Products</a></li> 
+            <li style="padding-left: 16px;"><a href="cocopeat.html">&rarr; Cocopeat</a></li>
+            <li style="padding-left: 16px;"><a href="coco-husk-chips.html">&rarr; Coco Husk Chips</a></li>
+            <li style="padding-left: 16px;"><a href="cocopeat-grow-bags.html">&rarr; Cocopeat Grow Bags</a></li>
+            <li style="padding-left: 16px;"><a href="coir-pith.html">&rarr; Coir Pith</a></li>
+            <li style="margin-top: 12px;"><a href="about.html">About Us</a></li>
+            <li><a href="quality.html">Quality</a></li>
+            <li><a href="export-markets.html">Export Markets</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><span class="label">&#128205;</span> Dindigul, Tamil Nadu, India &mdash; 624 618</p>
+          <p><span class="label">&#128222;</span> +91 9578684630</p>
+          <p><span class="label">&#128222;</span> +91 9976480745</p>
+          <p><span class="label">&#9993;</span><a href="mailto:sunexports2020@gmail.com">sunexports2020@gmail.com</a></p>
+          <p style="margin-top:16px;">
+    <span class="label">&#128172;</span>
+    <a href="https://wa.me/919578684630?text=Hello%20Sun%20Exports,%20I%20am%20interested%20in%20your%20coir%20products.%20Could%20you%20please%20share%20your%20product%20catalogue%20and%20quotation?" target="_blank" rel="noopener">
+      WhatsApp: +91 9578684630
+    </a>
+  </p>
+          <div class="certs">
+            <span class="cert-badge">ISO</span>
+            <span class="cert-badge">FIEO</span>
+            <span class="cert-badge">Phytosanitary</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2025 Sun Exports. All rights reserved. | <a href="#">Privacy</a> | <a href="#">Terms</a></div>
+        <div>Exporting from the heart of Tamil Nadu, India to the world.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/919578684630?text=Hello%2C%20I%27m%20interested%20in%20getting%20a%20quote%20for%20coir%20products%20from%20Sun%20Sun%20Exports." class="whatsapp-float" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.69875-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="label">Chat with us</span>
+  </a>
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby9WxOBFR42BgKrGi5SREtiqgTgtOi2_28PSNJc6Nb3Whonw7QSbTzE1V-sdjPtBQP1kA/exec";
+
+    const contactForm = document.getElementById("contact-form");
+
+    if (contactForm) {
+
+      contactForm.addEventListener("submit", async function(e) {
+
+        e.preventDefault();
+
+        const form = this;
+        const submitButton = form.querySelector('button[type="submit"]');
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
+        const formData = new FormData(form);
+
+        // Check whether at least one product is selected
+        const selectedProducts = form.querySelectorAll(
+          'input[name="product"]:checked'
+        );
+
+        if (selectedProducts.length === 0) {
+
+          alert("Please select at least one Product Required.");
+
+          submitButton.disabled = false;
+          submitButton.textContent = "Send My Inquiry to Sun Exports →";
+
+          return;
+        }
+
+        // Collect all selected products
+        const productValues = [
+          ...selectedProducts
+        ]
+          .map(input => input.value)
+          .join(", ");
+
+        // Get phone number
+        const phoneNumber = formData.get("phone");
+
+        // Get country code (either from the dropdown, or the custom input if "Other" was selected)
+        const countryCodeSelectValue = formData.get("country_code_select");
+        const countryCode = countryCodeSelectValue === "other"
+          ? formData.get("custom_country_code")
+          : countryCodeSelectValue;
+
+        // Combine country code + phone
+        const fullPhone = countryCode
+          ? countryCode + " " + phoneNumber
+          : phoneNumber;
+
+        const data = {
+
+          sheet: "contact",
+
+          "Full Name": formData.get("name"),
+
+          "Job Title / Role": formData.get("role"),
+
+          "Company Name": formData.get("company"),
+
+          "Website": formData.get("website"),
+
+          "Country": formData.get("country"),
+
+          "City / Port of Delivery": formData.get("port"),
+
+          "Email": formData.get("email"),
+
+          "Phone / WhatsApp": fullPhone,
+
+          "How did you find us?": formData.get("source"),
+
+          "Product(s) Required": productValues,
+
+          "Quantity Required": formData.get("quantity"),
+
+          "Incoterms": formData.get("incoterms"),
+
+          "Packaging": formData.get("packaging"),
+
+          "Buyer Type": formData.get("buyer_type"),
+
+          "Sample Required?": formData.get("sample"),
+
+          "Message / Additional Requirements":
+            formData.get("message")
+
+        };
+
+        try {
+
+          await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify(data)
+          });
+
+          // Hide form and show the success message in its place
+          form.style.display = "none";
+
+          const successBox = document.getElementById("form-success");
+          successBox.querySelector(".success-name").textContent = formData.get("name");
+          successBox.querySelector(".success-email").textContent = formData.get("email");
+          successBox.style.display = "block";
+
+          form.reset();
+
+        } catch (error) {
+
+          console.error("Contact form submission error:", error);
+
+          submitButton.disabled = false;
+          submitButton.textContent = "Send My Inquiry to Sun Exports →";
+
+          alert(
+            "Sorry, there was a problem submitting your inquiry. Please try again."
+          );
+
+        }
+
+      });
+
+    }
+</script>
+</body>
+</html>
