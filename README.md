@@ -25,7 +25,7 @@ This folder contains the complete static website for **Sun Exports** – a manuf
    python -m http.server 8000
    # Then open http://localhost:8000 in your browser
    ```
-   Or with Node.js:
+   Or with Node.js: yout 
    ```bash
    npx http-server . -p 8000
    ```
