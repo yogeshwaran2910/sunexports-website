@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Sun Exports</title>
+  <meta name="description" content="Privacy Policy of Sun Exports, a manufacturer and exporter of cocopeat and coir products from Tamil Nadu, India. Learn how we collect, use, and protect your information.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assests/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assests/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assests/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assests/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assests/favicon/site.webmanifest">
+  <style>
+    /* ================================================================
+       PRIVACY POLICY PAGE
+       ================================================================ */
+    .hero.short.privacy-hero { min-height: 340px; }
+    .privacy-hero .hero-content { text-align: center; max-width: 900px; margin: 0 auto; }
+    .privacy-hero .hero-content h1 { font-size: clamp(2.6rem, 5vw, 4.2rem); margin-bottom: 16px; }
+    .privacy-hero .hero-content p { margin: 0 auto; text-align: center; }
+
+    .policy-section { padding: 56px 0 80px; }
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* Table of contents */
+    .policy-toc {
+      position: sticky;
+      top: calc(var(--nav-height) + 24px);
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-top: 3px solid var(--color-gold);
+      border-radius: var(--radius-card);
+      padding: 24px 22px;
+      box-shadow: var(--shadow-sm);
+      max-height: calc(100vh - var(--nav-height) - 48px);
+      overflow-y: auto;
+    }
+    .policy-toc h4 {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-gold);
+      margin-bottom: 14px;
+    }
+    .policy-toc ol { list-style: none; counter-reset: toc; }
+    .policy-toc li { counter-increment: toc; margin: 0; }
+    .policy-toc a {
+      display: flex;
+      gap: 10px;
+      padding: 7px 10px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: var(--color-charcoal);
+      border-left: 2px solid transparent;
+      border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+      transition: background var(--transition), color var(--transition), border-color var(--transition);
+    }
+    .policy-toc a::before {
+      content: counter(toc) ".";
+      color: var(--color-gold);
+      font-weight: 600;
+      min-width: 22px;
+    }
+    .policy-toc a:hover,
+    .policy-toc a.active {
+      background: var(--color-cream);
+      color: var(--color-forest);
+      border-left-color: var(--color-gold);
+    }
+
+    /* Content card */
+    .policy-content {
+      background: var(--color-white);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-sm);
+      padding: 56px 64px;
+    }
+    .policy-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      padding-bottom: 24px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.875rem;
+      color: var(--color-muted);
+    }
+    .policy-meta strong { color: var(--color-forest); font-weight: 600; }
+
+    .policy-block { padding-top: 40px; scroll-margin-top: calc(var(--nav-height) + 16px); }
+    .policy-block h2 {
+      font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+    }
+    .policy-block h2 .num {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--color-gold);
+      background: var(--color-cream);
+      padding: 4px 10px;
+      border-radius: var(--radius-btn);
+      flex-shrink: 0;
+    }
+    .policy-block h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      margin: 26px 0 12px;
+    }
+    .policy-block p { color: #3a3f47; }
+    .policy-block a { color: var(--color-gold); font-weight: 600; border-bottom: 1px solid transparent; transition: border-color var(--transition); }
+    .policy-block a:hover { border-bottom-color: var(--color-gold); }
+
+    .policy-list { list-style: none; margin: 0 0 20px; }
+    .policy-list li {
+      position: relative;
+      padding-left: 26px;
+      margin-bottom: 8px;
+      color: #3a3f47;
+    }
+    .policy-list li::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 0.75em;
+      width: 7px;
+      height: 7px;
+      background: var(--color-gold);
+      transform: rotate(45deg);
+    }
+    .policy-list li strong { color: var(--color-forest); font-weight: 600; }
+
+    .policy-note {
+      background: var(--color-cream);
+      border-left: 3px solid var(--color-gold);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-card) var(--radius-card) 0;
+      margin: 20px 0;
+      font-size: 0.9375rem;
+      color: var(--color-forest);
+    }
+    .policy-note p { margin: 0; color: inherit; }
+
+    .policy-regions { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 20px 0 24px; }
+    .policy-region {
+      background: var(--color-cream);
+      border-radius: var(--radius-card);
+      padding: 18px 20px;
+    }
+    .policy-region h4 {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-gold);
+      margin-bottom: 6px;
+    }
+    .policy-region p { margin: 0; font-size: 0.9375rem; line-height: 1.6; }
+
+    .policy-contact {
+      background: var(--color-forest);
+      color: var(--color-white);
+      border-radius: var(--radius-card);
+      padding: 28px 32px;
+      margin: 20px 0;
+    }
+    .policy-contact p { color: var(--color-white); margin-bottom: 8px; }
+    .policy-contact p:last-child { margin-bottom: 0; }
+    .policy-contact strong { color: var(--color-gold-light); font-weight: 600; }
+    .policy-block .policy-contact a { color: var(--color-gold-light); }
+    .policy-closing { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--color-border); font-size: 0.875rem; color: var(--color-muted); text-align: center; }
+
+    @media (max-width: 1024px) {
+      .policy-layout { grid-template-columns: 1fr; gap: 28px; }
+      .policy-toc { position: static; max-height: none; }
+      .policy-toc ol { columns: 2; column-gap: 24px; }
+      .policy-toc li { break-inside: avoid; }
+    }
+    @media (max-width: 768px) {
+      .policy-section { padding: 32px 0 56px; }
+      .policy-content { padding: 32px 22px; }
+      .policy-toc ol { columns: 1; }
+      .policy-regions { grid-template-columns: 1fr; }
+      .policy-block h2 { flex-direction: column; gap: 8px; }
+      .policy-contact { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Translate (hidden by default, can be enabled via language selector) -->
+  <div id="google_translate_element" style="display:none;"></div>
+  
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assests/images/SUN LOGO.png" alt="Sun Exports Logo" class="logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-dropdown">
+          <a href="products.html">Products &#9662;</a>
+          <div class="nav-dropdown-menu">
+            <a href="cocopeat.html">Cocopeat</a>
+            <a href="coco-husk-chips.html">coco husk chips</a>
+            <a href="cocopeat-grow-bags.html">cocopeat grow bags</a>
+            <a href="coir-pith.html">coir pith / Dust</a>
+          </div>
+        </li>
+        <li><a href="quality.html">Quality</a></li>
+        <li><a href="export-markets.html">Markets</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <select id="lang-select" class="lang-switcher" aria-label="Language" onchange="changeLanguage(this.value)">
+          <option value="en">&#127468;&#127463; EN</option>
+          <option value="ar">&#127480;&#127462; AR</option>
+          <option value="es">&#127466;&#127480; ES</option>
+          <option value="fr">&#127467;&#127479; FR</option>
+          <option value="de">&#127465;&#127466; DE</option>
+          <option value="ja">&#127471;&#127477; JA</option>
+          <option value="ko">&#127472;&#127479; KO</option>
+          <option value="pt">&#127463;&#127479; PT</option>
+          <option value="nl">&#127475;&#127473; NL</option>
+          <option value="zh-CN">&#127464;&#127475; CN</option>
+        </select>
+        <a href="contact.html" class="btn btn-gold">Get a Quote</a>
+        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="cocopeat.html">Cocopeat</a>
+    <a href="coco-husk-chips.html">coco husk chips</a>
+    <a href="cocopeat-grow-bags.html">cocopeat grow bags</a>
+    <a href="coir-pith.html">coir pith / Dust</a>
+    <a href="quality.html">Quality</a>
+    <a href="export-markets.html">Markets</a>
+    <a href="blog.html">Blog</a>
+    <a href="gallery.html">Gallery</a>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero short privacy-hero" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&amp;q=80');">
+    <div class="hero-content">
+      <span class="eyebrow">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p>How Sun Exports collects, uses, and protects your information.</p>
+    </div>
+  </header>
+
+  <!-- Policy Section -->
+  <section class="section-cream policy-section">
+    <div class="container">
+      <div class="policy-layout">
+
+        <aside class="policy-toc" aria-label="Table of contents">
+          <h4>On This Page</h4>
+          <ol>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#information-we-collect">Information We Collect</a></li>
+            <li><a href="#how-we-use">How We Use Your Information</a></li>
+            <li><a href="#marketing">Marketing Communications</a></li>
+            <li><a href="#sharing">How We Share Your Information</a></li>
+            <li><a href="#security">Data Storage and Security</a></li>
+            <li><a href="#cookies">Cookies and Tracking</a></li>
+            <li><a href="#international">International Visitors and Transfers</a></li>
+            <li><a href="#rights">Your Privacy Rights</a></li>
+            <li><a href="#third-party">Third-Party Websites</a></li>
+            <li><a href="#children">Children's Privacy</a></li>
+            <li><a href="#updates">Updates to This Policy</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+          </ol>
+        </aside>
+
+        <article class="policy-content">
+          <div class="policy-meta">
+            <span><strong>Company:</strong> Sun Exports</span>
+            <span><strong>Effective Date:</strong> 18 October 2026</span>
+            <span><strong>Website:</strong> sunexports.co.in</span>
+          </div>
+
+          <!-- 1 -->
+          <div class="policy-block" id="introduction">
+            <h2><span class="num">01</span>Introduction</h2>
+            <p>Sun Exports (“we,” “our,” or “us”) is a manufacturer and exporter of cocopeat and coir-based products, based in Tamil Nadu, India. We supply products to international buyers, importers, distributors, wholesalers, and businesses involved in horticulture, agriculture, hydroponics, and related industries.</p>
+            <p>This Privacy Policy explains how we collect, use, store, disclose, and protect information when you visit our website, <a href="https://sunexports.co.in">https://sunexports.co.in</a>, submit an inquiry, request a quotation, or communicate with us regarding our products and services.</p>
+            <p>By using our website, you acknowledge the practices described in this Privacy Policy, subject to applicable data protection laws.</p>
+          </div>
+
+          <!-- 2 -->
+          <div class="policy-block" id="information-we-collect">
+            <h2><span class="num">02</span>Information We Collect</h2>
+
+            <h3>2.1 Information You Provide Directly</h3>
+            <p>When you submit a contact form, request a quotation, or contact us through email, telephone, or WhatsApp, we may collect:</p>
+            <ul class="policy-list">
+              <li>Full name and job title</li>
+              <li>Company or business name</li>
+              <li>Country and business location</li>
+              <li>Business email address</li>
+              <li>Phone number or WhatsApp number</li>
+              <li>Products of interest, including cocopeat blocks, grow bags, coco husk chips, and coir pith</li>
+              <li>Estimated order quantity and product specifications</li>
+              <li>Packaging, shipping, and quotation requirements</li>
+              <li>Destination port and relevant export inquiry details</li>
+              <li>Any additional information included in your message</li>
+            </ul>
+            <div class="policy-note"><p>Please avoid sharing sensitive personal information unless it is necessary for a specific business or legal purpose.</p></div>
+
+            <h3>2.2 Information Collected Automatically</h3>
+            <p>When you visit our website, certain technical information may be collected automatically, depending on the website technologies and tools in use. This may include:</p>
+            <ul class="policy-list">
+              <li>Browser type and version</li>
+              <li>Device type and operating system</li>
+              <li>IP address and approximate geographic location</li>
+              <li>Pages visited and time spent on the website</li>
+              <li>Referring websites and search engines</li>
+              <li>Website interactions and traffic sources</li>
+            </ul>
+            <p>We may use website analytics services, such as Google Analytics, to understand visitor behaviour, measure website performance, and improve the user experience.</p>
+
+            <h3>2.3 Cookies and Advertising Data</h3>
+            <p>Our website may use cookies and similar technologies for essential website functionality, analytics, and advertising measurement, where enabled.</p>
+            <p>If we use services such as Google Ads or Meta advertising tools, certain website interactions may be processed to measure campaign performance and understand how visitors engage with our website.</p>
+            <p>The information collected depends on the tools and settings in use. Where required by applicable law, we will request consent before using non-essential cookies or advertising tracking technologies.</p>
+          </div>
+
+          <!-- 3 -->
+          <div class="policy-block" id="how-we-use">
+            <h2><span class="num">03</span>How We Use Your Information</h2>
+            <p>We may use the information collected for legitimate business purposes, including:</p>
+            <ul class="policy-list">
+              <li>Responding to product inquiries and quotation requests</li>
+              <li>Providing product specifications, pricing, packaging details, and export information</li>
+              <li>Understanding requirements for bulk orders and international shipments</li>
+              <li>Communicating about potential or ongoing business transactions</li>
+              <li>Coordinating orders, manufacturing, logistics, shipping, and documentation</li>
+              <li>Improving our website, products, and customer communication</li>
+              <li>Measuring website traffic and digital advertising performance</li>
+              <li>Preventing spam, fraud, misuse, and unauthorised access</li>
+              <li>Complying with applicable legal, tax, customs, and export obligations</li>
+            </ul>
+            <p>We handle personal information in accordance with this Privacy Policy and applicable law. Where required, we will obtain consent for specific processing activities.</p>
+          </div>
+
+          <!-- 4 -->
+          <div class="policy-block" id="marketing">
+            <h2><span class="num">04</span>Marketing Communications</h2>
+            <p>We may contact you regarding an inquiry you have submitted, a quotation you have requested, or an existing business relationship.</p>
+            <p>We will send promotional or marketing communications only where permitted by applicable law and, where required, with your consent.</p>
+            <p>You may opt out of marketing communications at any time by contacting us using the details provided in <a href="#contact-us">Section 13</a>.</p>
+          </div>
+
+          <!-- 5 -->
+          <div class="policy-block" id="sharing">
+            <h2><span class="num">05</span>How We Share Your Information</h2>
+            <div class="policy-note"><p><strong>Sun Exports does not sell or rent your personal information to third parties.</strong></p></div>
+            <p>We may share relevant information in the following circumstances:</p>
+            <ul class="policy-list">
+              <li><strong>Logistics and freight partners:</strong> When necessary to arrange shipping, transportation, or delivery for an order.</li>
+              <li><strong>Manufacturing and supply partners:</strong> When required to fulfil product specifications, custom packaging, or an agreed order.</li>
+              <li><strong>Service providers:</strong> With website hosting, analytics, communication, and technology providers that support our business operations.</li>
+              <li><strong>Professional advisers:</strong> Where reasonably necessary for accounting, legal, or compliance purposes.</li>
+              <li><strong>Government and regulatory authorities:</strong> When disclosure is required by applicable law, customs regulations, export requirements, or a valid legal request.</li>
+              <li><strong>Business transactions:</strong> Where necessary in connection with a merger, restructuring, or transfer of business, subject to applicable legal requirements.</li>
+            </ul>
+            <p>We aim to limit information shared to what is reasonably necessary for the relevant purpose.</p>
+          </div>
+
+          <!-- 6 -->
+          <div class="policy-block" id="security">
+            <h2><span class="num">06</span>Data Storage and Security</h2>
+            <p>We take reasonable technical and organisational measures to protect personal information against unauthorised access, disclosure, alteration, loss, or misuse.</p>
+            <p>Information may be stored or processed through our website hosting platform, business communication systems, analytics services, and other service providers used in our operations.</p>
+            <p>Although we take reasonable steps to safeguard information, no method of electronic transmission or storage can be guaranteed to be completely secure.</p>
+            <p>We retain information for as long as reasonably necessary to respond to inquiries, maintain business relationships, fulfil contractual obligations, comply with legal requirements, and resolve disputes.</p>
+          </div>
+
+          <!-- 7 -->
+          <div class="policy-block" id="cookies">
+            <h2><span class="num">07</span>Cookies and Tracking Technologies</h2>
+            <p>Cookies are small text files stored on your device when you visit a website. We may use cookies or similar technologies to:</p>
+            <ul class="policy-list">
+              <li>Enable essential website functionality</li>
+              <li>Understand website traffic and visitor behaviour</li>
+              <li>Improve website performance and usability</li>
+              <li>Measure advertising effectiveness, where applicable</li>
+            </ul>
+            <p>You may be able to manage or disable cookies through your browser settings. You can also use any cookie preference controls provided on our website.</p>
+            <p>Disabling certain cookies may affect some website features. Where legally required, non-essential cookies will be used only after the necessary consent has been obtained.</p>
+          </div>
+
+          <!-- 8 -->
+          <div class="policy-block" id="international">
+            <h2><span class="num">08</span>International Visitors and Data Transfers</h2>
+            <p>Sun Exports operates from India and serves international buyers, importers, distributors, wholesalers, and businesses across global markets. Our export markets include Europe, the Middle East, North America, South America, East Asia, Southeast Asia, Australia, and New Zealand.</p>
+            <p>Our website may be accessed by visitors from countries and regions including, but not limited to:</p>
+
+            <div class="policy-regions">
+              <div class="policy-region"><h4>Europe</h4><p>Germany, the Netherlands, Spain, Portugal, France, Italy, Belgium, Poland, Sweden, Denmark, Norway, Finland, Switzerland, Austria, Ireland, Greece, and the United Kingdom, along with other European markets.</p></div>
+              <div class="policy-region"><h4>Middle East</h4><p>United Arab Emirates, Saudi Arabia, Qatar, Oman, Kuwait, Bahrain, and other Middle Eastern markets.</p></div>
+              <div class="policy-region"><h4>North America</h4><p>United States, Canada, and Mexico.</p></div>
+              <div class="policy-region"><h4>South America</h4><p>Brazil, Argentina, Chile, Colombia, Peru, and other South American markets.</p></div>
+              <div class="policy-region"><h4>East Asia</h4><p>China, South Korea, Japan, Taiwan, and other East Asian markets.</p></div>
+              <div class="policy-region"><h4>Southeast Asia</h4><p>Singapore, Malaysia, Indonesia, Thailand, Vietnam, the Philippines, and other Southeast Asian markets.</p></div>
+              <div class="policy-region"><h4>Australia and Oceania</h4><p>Australia, New Zealand, and other relevant markets in the region.</p></div>
+            </div>
+
+            <p>These countries are illustrative examples of international markets and are not intended to represent an exhaustive list of our customers or active export destinations.</p>
+            <p>When you visit our website, submit a product inquiry, or contact us for a quotation, your personal information may be processed or stored in India or in other countries where our website hosting, analytics, communication, or technology service providers operate.</p>
+            <p>Data protection laws may differ between India and your country of residence. Where required by applicable law, Sun Exports will implement appropriate safeguards for international transfers of personal information.</p>
+
+            <h3>8.1 Visitors from the European Economic Area and the United Kingdom</h3>
+            <p>For visitors from the European Economic Area (EEA), the United Kingdom, and other jurisdictions with specific data protection requirements, we will process personal information in accordance with applicable laws.</p>
+            <p>Depending on the circumstances, the lawful basis for processing may include responding to your inquiry, taking steps at your request before entering into a contract, fulfilling contractual obligations, complying with legal requirements, pursuing legitimate business interests, or obtaining consent where required.</p>
+            <p>Where applicable, you may have rights to access, correct, delete, restrict, or object to the processing of your personal information, as well as rights relating to data portability and withdrawal of consent.</p>
+            <p>Where international transfers require specific safeguards under applicable law, we will take appropriate measures to protect the information transferred.</p>
+            <p>For questions about international data transfers or your privacy rights, please contact us using the details provided in <a href="#contact-us">Section 13</a>.</p>
+          </div>
+
+          <!-- 9 -->
+          <div class="policy-block" id="rights">
+            <h2><span class="num">09</span>Your Privacy Rights</h2>
+            <p>Depending on your country of residence and applicable law, you may have the right to:</p>
+            <ul class="policy-list">
+              <li>Request access to personal information we hold about you</li>
+              <li>Request correction of inaccurate or incomplete information</li>
+              <li>Request deletion of personal information, where applicable</li>
+              <li>Withdraw consent where processing is based on consent</li>
+              <li>Object to or request restrictions on certain processing activities</li>
+              <li>Request a copy of certain personal information in a portable format, where applicable</li>
+              <li>Opt out of marketing communications</li>
+              <li>Raise a complaint with the relevant data protection authority</li>
+            </ul>
+            <p>To exercise an applicable right, contact us using the details in <a href="#contact-us">Section 13</a>. We may need to verify your identity before processing a request.</p>
+            <p>We will respond within the timeframe required by applicable law.</p>
+          </div>
+
+          <!-- 10 -->
+          <div class="policy-block" id="third-party">
+            <h2><span class="num">10</span>Third-Party Websites and Services</h2>
+            <p>Our website may contain links to third-party websites, social media platforms, logistics providers, certification bodies, or other external services.</p>
+            <p>These websites and services operate under their own privacy policies. Sun Exports is not responsible for the privacy practices of third parties outside our control.</p>
+            <p>We encourage you to review the relevant privacy policies before providing personal information to third-party websites or services.</p>
+          </div>
+
+          <!-- 11 -->
+          <div class="policy-block" id="children">
+            <h2><span class="num">11</span>Children's Privacy</h2>
+            <p>Our website and services are intended for business customers and are not directed towards children.</p>
+            <p>We do not knowingly collect children's personal information for business marketing purposes. If you believe a child has provided personal information to us, please contact us so that we can review the matter and take appropriate action.</p>
+          </div>
+
+          <!-- 12 -->
+          <div class="policy-block" id="updates">
+            <h2><span class="num">12</span>Updates to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our business practices, website technologies, analytics tools, or legal obligations.</p>
+            <p>Any revised version will be published on this page with an updated effective date.</p>
+            <p>We encourage visitors to review this page periodically to remain informed about how we collect, use, and protect personal information.</p>
+          </div>
+
+          <!-- 13 -->
+          <div class="policy-block" id="contact-us">
+            <h2><span class="num">13</span>Contact Us</h2>
+            <p>If you have questions about this Privacy Policy, wish to exercise your privacy rights, or would like further information about how we handle personal information, please contact us:</p>
+            <div class="policy-contact">
+              <p><strong>Sun Exports</strong><br>Dindigul, Tamil Nadu, India</p>
+              <p><strong>Email:</strong> <a href="mailto:sunexports2020@gmail.com">sunexports2020@gmail.com</a></p>
+              <p><strong>Website:</strong> <a href="https://sunexports.co.in">https://sunexports.co.in</a></p>
+              <p><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/919578684630">+91 95786 84630</a></p>
+            </div>
+            <p>Please use the official contact details published on our website if any of the above information changes.</p>
+          </div>
+
+          <p class="policy-closing">&copy; 2026 Sun Exports. All rights reserved.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>SUN EXPORTS</h3>
+          <p>Manufacturer &amp; Exporter of Premium Coir Products<br>Dindigul, Tamil Nadu, India &mdash; Est. 2010</p>
+          <p style="margin-top: 16px;">Trusted by buyers in over 20 countries across Europe, the Middle East, Southeast Asia, and the Americas.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="products.html">Products</a></li> 
+            <li style="padding-left: 16px;"><a href="cocopeat.html">&rarr; Cocopeat</a></li>
+            <li style="padding-left: 16px;"><a href="coco-husk-chips.html">&rarr; Coco Husk Chips</a></li>
+            <li style="padding-left: 16px;"><a href="cocopeat-grow-bags.html">&rarr; Cocopeat Grow Bags</a></li>
+            <li style="padding-left: 16px;"><a href="coir-pith.html">&rarr; Coir Pith</a></li>
+            <li style="margin-top: 12px;"><a href="about.html">About Us</a></li>
+            <li><a href="quality.html">Quality</a></li>
+            <li><a href="export-markets.html">Export Markets</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><span class="label">&#128205;</span> Dindigul, Tamil Nadu, India &mdash; 624 618</p>
+          <p><span class="label">&#128222;</span> +91 9578684630</p>
+          <p><span class="label">&#128222;</span> +91 9976480745</p>
+          <p><span class="label">&#9993;</span><a href="mailto:sunexports2020@gmail.com">sunexports2020@gmail.com</a></p>
+          <p style="margin-top:16px;">
+    <span class="label">&#128172;</span>
+    <a href="https://wa.me/919578684630?text=Hello%20Sun%20Exports,%20I%20am%20interested%20in%20your%20coir%20products.%20Could%20you%20please%20share%20your%20product%20catalogue%20and%20quotation?" target="_blank" rel="noopener">
+      WhatsApp: +91 9578684630
+    </a>
+  </p>
+          <div class="certs">
+            <span class="cert-badge">ISO</span>
+            <span class="cert-badge">FIEO</span>
+            <span class="cert-badge">Phytosanitary</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Sun Exports. All rights reserved. | <a href="privacy-policy.html">Privacy</a> | <a href="#">Terms</a></div>
+        <div>Exporting from the heart of Tamil Nadu, India to the world.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/919578684630?text=Hello%2C%20I%27m%20interested%20in%20getting%20a%20quote%20for%20coir%20products%20from%20Sun%20Sun%20Exports." class="whatsapp-float" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.69875-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="label">Chat with us</span>
+  </a>
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    // Highlight the current section in the table of contents
+    (function () {
+      var links = document.querySelectorAll('.policy-toc a');
+      var blocks = [];
+      links.forEach(function (a) {
+        var el = document.getElementById(a.getAttribute('href').slice(1));
+        if (el) blocks.push({ el: el, link: a });
+      });
+      function onScroll() {
+        var current = blocks[0];
+        var offset = window.innerHeight * 0.3;
+        blocks.forEach(function (b) {
+          if (b.el.getBoundingClientRect().top - offset <= 0) current = b;
+        });
+        links.forEach(function (a) { a.classList.remove('active'); });
+        if (current) current.link.classList.add('active');
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+</body>
+</html>

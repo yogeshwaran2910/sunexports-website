@@ -975,4 +975,39 @@ footer .cert-badge {
     }
 
 }
+.privacy-consent {
+  margin: 20px 0;
+  text-align: left;
+}
 
+.privacy-consent-label {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left !important;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.privacy-consent-label input[type="checkbox"] {
+  display: inline-block !important;
+  width: 16px;
+  height: 16px;
+  margin: 0 !important;
+  flex: 0 0 16px;
+  cursor: pointer;
+}
+
+.privacy-consent-label span {
+  display: inline;
+}
+
+.privacy-consent-label a {
+  color: var(--color-gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
